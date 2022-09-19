@@ -1,23 +1,23 @@
-import gql from '../../middleware/gqlClient.js'
+import gql from '../../middleware/gqlClient'
 
 async function unfollowStrategy(req, res) {
-  const { strategy, authId } = req.body
+  const { strategy, auth_id } = req.body
   const strategyString = `${strategy.label}-${strategy.instrument}-${strategy.timeframe}`
-  // const id = req.body.authId
+  // const id = req.body.auth_id
   const returnedData = []
   const actions = []
 
   const unlinkStrategyToCustomer = await gql.request(
     `mutation unlinkStrategyToCustomer {
         updateCustomer(
-          where: {authId: "${authId}"}
+          where: {auth_id: "${auth_id}"}
           data: {strategies: {disconnect: {strategyString: "${strategyString}"}}})
         {
-          authId
+          auth_id
         }
-        publishCustomer(where: {authId: "${authId}"})
+        publishCustomer(where: {auth_id: "${auth_id}"})
         {
-          authId
+          auth_id
           strategies {
             strategyString
           }

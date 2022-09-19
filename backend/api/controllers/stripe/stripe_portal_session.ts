@@ -1,9 +1,7 @@
-import Stripe from 'stripe'
-import env from '../../../config.js'
+import stripe from './stripe_client'
 
-async function stripeSession(req, res) {
+async function stripeSession (req: any, res: any) {
   // logger.info(['Stripe Checkout:'])
-  const stripe = new Stripe(env.STRIPE_SECRET)
   const { sessionId } = req.body
   const session = await stripe.checkout.sessions.retrieve(sessionId)
   res.status(200).send(session)

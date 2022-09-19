@@ -1,8 +1,8 @@
+// import path from 'path'
 import { PrismaClient } from '@prisma/client'
-import path = require('path')
 const prisma = new PrismaClient()
 
-async function main() {
+async function main () {
   // ... you will write your Prisma Client queries here
   const instruments = await prisma.instruments.findMany()
   console.log(instruments)

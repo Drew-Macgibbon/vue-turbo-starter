@@ -1,6 +1,6 @@
 Store pinia
 Für getters kein get im Namen
-Für actions (Mutations und Actions) (camelCase)
+Für actions (Mutations und Actions)
 Initial Action -> set
 Wert ändern -> update 
 Wert hinzufügen -> add

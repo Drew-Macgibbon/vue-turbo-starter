@@ -3,5 +3,8 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 const { defineConfig } = require('eslint-define-config')
 
 module.exports = defineConfig({
-  extends: ['@nuxtjs/eslint-config-typescript']
+  extends: ['@nuxtjs/eslint-config-typescript'],
+  rules: {
+    camelcase: 'off'
+  }
 })

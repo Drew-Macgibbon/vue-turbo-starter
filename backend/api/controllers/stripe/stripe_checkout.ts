@@ -1,9 +1,8 @@
-import Stripe from 'stripe'
-import env from '../../../config.js'
+import env from '../../config'
+import stripe from './stripe_client'
 
-async function stripeCheckout(req, res) {
+async function stripeCheckout (req: any, res: any) {
   // logger.info(['Stripe Checkout:'])
-  const stripe = new Stripe(env.STRIPE_SECRET)
   let { priceId, customerId } = req.body
   if (env.NODE_ENV === 'development') {
     priceId = 'price_1InBZfDhvT9geSyOLlbiYCYB'
@@ -16,12 +15,12 @@ async function stripeCheckout(req, res) {
     line_items: [
       {
         price: priceId,
-        quantity: 1,
-      },
+        quantity: 1
+      }
     ],
     allow_promotion_codes: true,
     success_url: `${env.BASE_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${env.BASE_URL}/payment-failed?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${env.BASE_URL}/payment-failed?session_id={CHECKOUT_SESSION_ID}`
   })
   res.status(200).send(session)
 }

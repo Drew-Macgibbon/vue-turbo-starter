@@ -1,9 +1,9 @@
 import express from 'express'
-import controllers from '../controllers/index.js'
+import controllers from '../controllers/index'
 
 // Middleware
-import useExpressJson from '../middleware/useJson.js'
-import checkJwt from '../middleware/checkJwt.js'
+import useExpressJson from '../middleware/useJson'
+import checkJwt from '../middleware/checkJwt'
 
 const router = express.Router()
 

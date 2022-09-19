@@ -1,5 +1,5 @@
 import request from 'request'
-import env from '../../../config.js'
+import env from '../config'
 
 const getAuth0ManagementApiJwt = () => new Promise((resolve, reject) => {
   const managementApiOptions = {

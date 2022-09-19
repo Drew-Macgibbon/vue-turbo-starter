@@ -1,22 +1,22 @@
 // strategies
-// import createStrategy from './strategy/createStrategy.js'
-// import followStrategy from './strategy/followStrategy.js'
-// import unfollowStrategy from './strategy/unfollowStrategy.js'
+// import createStrategy from './strategy/createStrategy'
+// import followStrategy from './strategy/followStrategy'
+// import unfollowStrategy from './strategy/unfollowStrategy'
 
 // stripe
-import stripeCustomerPortal from './stripe/stripeCustomerPortal.js'
-import stripeCheckout from './stripe/stripeCheckout.js'
-import stripeWebhook from './stripe/stripeWebhook.js'
-import stripeSession from './stripe/stripeSession.js'
+import stripeCustomerPortal from './stripe/stripe_customer_portal'
+import stripeCheckout from './stripe/stripe_checkout'
+import stripeWebhook from './stripe/stripe_webhook'
+import stripeSession from './stripe/stripe_portal_session'
 
 // test
-import testAuth from './test/testAuth.js'
-import testNoAuth from './test/testNoAuth.js'
+import testAuth from './test/test_auth'
+import testNoAuth from './test/test_public'
 
 // Circle
-import createCircleUser from './circle/createCircleUser.js'
-import getCirclePosts from './circle/getCirclePosts.js'
-import getCircleInfo from './circle/getCircleInfo.js'
+import createCircleUser from './circle/create_circle_user'
+import getCirclePosts from './circle/get_circle_posts'
+import getCircleInfo from './circle/get_circle_info'
 
 const controller = {
   // strategy: {

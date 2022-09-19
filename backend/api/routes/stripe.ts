@@ -1,12 +1,12 @@
-import express from 'express'
-import controllers from '../controllers/index.js'
+import { Router } from 'express'
+import controllers from '../controllers/index'
 
 // Middleware
-import useExpressJson from '../middleware/useJson.js'
-import useExpressRaw from '../middleware/useRaw.js'
-import checkJwt from '../middleware/checkJwt.js'
+import useExpressJson from '../middleware/useJson'
+import useExpressRaw from '../middleware/useRaw'
+import checkJwt from '../middleware/checkJwt'
 
-const router = express.Router()
+const router = Router()
 
 router.post('/customer-portal', useExpressJson, checkJwt, controllers.stripe.customerPortal)
 
