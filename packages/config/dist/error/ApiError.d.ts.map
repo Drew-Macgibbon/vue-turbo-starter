@@ -1,0 +1,1 @@
+{"version":3,"file":"ApiError.d.ts","sourceRoot":"","sources":["../../../../backend/api/error/ApiError.ts"],"names":[],"mappings":"AAEA,cAAM,QAAQ;gBACA,IAAI,KAAA,EAAE,OAAO,KAAA;IAKzB,MAAM,CAAC,UAAU,CAAC,GAAG,KAAA;IAIrB,MAAM,CAAC,QAAQ,CAAC,GAAG,KAAA;CAGpB;AAED,eAAe,QAAQ,CAAA"}

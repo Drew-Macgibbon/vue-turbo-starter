@@ -1,4 +1,4 @@
-import { join, resolve } from 'path'
+import { join } from 'path'
 import type { StorybookViteConfig } from '@storybook/builder-vite'
 import WindiCSS from 'vite-plugin-windicss'
 
@@ -29,8 +29,8 @@ const config: StorybookViteConfig = {
   ],
   viteFinal (config, { configType }) {
     config.resolve.alias = {
-      ...config.resolve.alias,
-      '@ui': resolve(__dirname, '../../../packages/ui/src')
+      ...config.resolve.alias
+      // '@ui': resolve(__dirname, '../../../packages/ui/src')
     }
     // config.resolve.modules = [resolve(__dirname, '@', '../components'), 'node_modules'];
     config.plugins = config.plugins ?? []

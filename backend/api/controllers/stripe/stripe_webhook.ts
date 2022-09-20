@@ -1,7 +1,7 @@
 import request from 'request'
 import Stripe from 'stripe'
 import getAuth0ManagementApiJwt from '../../functions/getAuth0ManagementApiJwt'
-import logger from '../../middleware/logger'
+import logger from '../../middleware/logger/logger'
 import env from '../../config'
 
 function updateAuth0 ({ app_metadata, event_type, auth_id }) {

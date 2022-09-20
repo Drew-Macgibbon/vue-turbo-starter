@@ -6,8 +6,8 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@ui": ["../../packages/ui/src"],
-      "@ui/*": ["../../packages/ui/src/*"]
+      // "@ui": ["../../packages/ui/src"],
+      // "@ui/*": ["../../packages/ui/src/*"]
     }
   },
   "include": ["./.storybook/**/*", "./stories/**/*", "./**/*"]

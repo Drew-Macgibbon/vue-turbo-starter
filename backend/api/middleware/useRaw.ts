@@ -1,5 +1,6 @@
-import express from 'express'
+import { raw } from 'express'
+import type * as types from 'express'
 
-const useExpressRaw = express.raw({ type: '*/*' })
+const useExpressRaw: types.Handler = raw({ type: '*/*' })
 
 export default useExpressRaw

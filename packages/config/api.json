@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "outDir": "./dist",
     "baseUrl": "./",
     "moduleResolution": "node",
     "strict": true,
     "lib": ["es2018"],
+    "types": ["node", "jest", "express"],
     "esModuleInterop": true,
     "target": "es2018",
-    "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -19,6 +18,11 @@
     "noImplicitAny": true,
     "strictBindCallApply": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "declarationMap": true
   }
 }

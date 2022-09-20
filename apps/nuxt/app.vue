@@ -1,9 +1,8 @@
 <script lang="ts" setup>
-import { useHelloWorld } from '@/store/helloWorld'
 
-const store = useHelloWorld()
-const { message } = store
-console.log(message)
+// const store = useHelloWorld()
+// const { message } = store
+// console.log(message)
 </script>
 
 <template>
