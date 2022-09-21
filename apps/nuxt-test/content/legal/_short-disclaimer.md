@@ -1,0 +1,4 @@
+###### DISCLAIMER
+
+Forex, Cryptocurrency, Stocks, Commodities, Futures and any other market ("**Markets**") trading has large potential rewards, but also large potential risk. You must be aware of the risks and be willing to accept them in order to invest in the Markets. **Don't trade with money you can't afford to lose** especially with leveraged instruments such as binary options trading, futures trading or forex trading. This website is neither a solicitation nor an offer to Buy/Sell into Markets. No guarantee or suggestion is being made that any account will or is likely to achieve profits or losses similar to those discussed on this website. The past performance of any trading system or methodology is not necessarily indicative of future results. You could lose all of your money fast due too: poor market trading conditions, mechanical error, emotional induced errors, news surprises and earnings releases. **Do NOT trade with money you cannot afford to lose!**
+

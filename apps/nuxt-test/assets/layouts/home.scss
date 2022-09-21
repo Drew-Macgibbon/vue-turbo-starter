@@ -1,0 +1,145 @@
+@use '../variables.css';
+
+.feature-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .count {
+    border-radius: 10rem;
+    background-color: var(--bg-primary);
+    padding: .6rem 1.4rem;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-img {
+  position: absolute;
+  width: 2000px;
+  height: 100%;
+  background-image: var(--bg-img);
+  background-repeat: repeat;
+  z-index: 0;
+  filter: var(--invert);
+  -webkit-filter: var(--invert);
+}
+.landing {
+  position: relative;
+  width: 100%;
+  .landing-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .hero-wrapper {
+      max-width: 90%;
+      .hero-section {
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+        max-width: 1400px;
+        justify-content: center;
+        align-items: center;
+        .hero-video {
+          position: relative;
+          border-radius: 1rem;
+          left: 0px;
+          background-color: var(--bg-accent);
+          box-shadow: var(--shadow);
+          padding: var(--pad);
+        }
+        .hero-text {
+          gap: 2rem;
+          position: relative;
+          .hero-cta-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            .hero-cta {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+    .featured-image {
+      display: flex;
+      justify-content: center;
+      background-image: url(/mlfx-trading.png);
+      background-size: 100% auto;
+      aspect-ratio: 16/9;
+      width: 100%;
+      z-index: 10;
+      &.community-img {
+        background-image: none;
+        height: auto;
+        border-radius: var(--bdr-radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        margin-bottom: 2rem;
+      }
+      .featured-video {
+        margin-top: 4.5rem;
+        height: auto;
+      }
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+      gap: var(--pad);
+      .feature {
+        gap: calc(var(--pad) / 2);
+        display: flex;
+      }
+    }
+    .slider {
+      gap: var(--pad);
+      width: 100%;
+      .slides {
+        width: 90%;
+        height: 460px;
+      }
+    }
+  }
+}
+
+.why-us {
+  max-width: 45%;
+}
+
+.science {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  height: 100%;
+}
+
+
+@media screen and (max-width: 1400px) {
+  .hero-section {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-text {
+    align-items: center;
+    justify-content: center;
+    gap: 3rem !important;
+    .p0 {
+      text-align: center;
+    }
+    .sub-head {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-cta-wrap {
+    flex-direction: column !important;
+    gap: 2rem;
+  } 
+}

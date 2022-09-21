@@ -1,0 +1,50 @@
+@use '../variables.css';
+
+.card {
+  position: relative;
+  border-radius: var(--bdr-radius);
+  border: 1px solid var(--bdr-color);
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+  gap: var(--pad);
+  transition: all 0.3s ease-in-out, background 0s, color 0s, border 0s;
+
+  .card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+  }
+  .card-info {
+    display: flex;
+    justify-content: left;
+    align-items: bottom;
+  }
+
+  .card-tag {
+    border: 2px solid #d85e0d;
+    font-size: 10px;
+    line-height: 0px;
+    font-weight: 500;
+    border-radius: 20rem;
+    margin: 0px;
+    padding: .7rem .6rem ;
+    &.primary {
+      border: 2px solid transparent;
+      background-color: var(--color-primary);
+      color: white;
+      &.absolute {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        font-weight: 500;
+      }
+    }
+  }
+  .card-excerpt {
+    margin: 0;
+  }
+}

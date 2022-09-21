@@ -1,4 +1,4 @@
-export default interface env {
+export interface env {
   hasuraFrontSchema: string
   linkFacebook: string
   linkTelegram: string
@@ -8,3 +8,4 @@ export default interface env {
   linkHermes: string
   apiBase: string
 }
+      

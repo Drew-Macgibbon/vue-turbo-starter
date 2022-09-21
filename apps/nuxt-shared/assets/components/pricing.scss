@@ -1,0 +1,37 @@
+@use '../variables.css';
+
+.pricing {
+  width: 380px;
+}
+
+.badge {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: var(--weight-bold);
+  z-index: -1;
+  border-radius: var(--bdr-radius) var(--bdr-radius) 0 0;
+  padding: 2px 1rem;
+  position: absolute;
+  right: 1rem;
+  top: -26px;
+}
+
+.old-price {
+  margin-top: -20px;
+  text-decoration: line-through;
+  text-decoration-color: var(--color-link);
+  text-decoration-thickness: 3px;
+}
+
+.new-price {
+  color: var(--color-primary);
+  padding-left: 4px;
+}
+
+.sub-features {
+  padding-left: 20px;
+  list-style: circle !important;
+  li {
+    padding-bottom: calc(var(--pad) / 2);
+  }
+}

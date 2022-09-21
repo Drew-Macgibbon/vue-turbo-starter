@@ -1,0 +1,66 @@
+
+.theme-change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  position: fixed;
+  display: grid;
+  grid-template-columns: minmax(25%, 2fr) minmax(10px, 1fr) minmax(75%, 2fr);
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--bg-accent);
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: var(--shadow);
+  .nav-container {
+    display: flex;
+    position: relative;
+    gap: calc(var(--pad) / 2);
+    padding-left: calc(var(--pad) / 1.75);
+    padding-right: var(--pad);
+    height: 36px;
+    &.right {
+      align-items: center;
+      justify-content: right;
+    }
+    &.left {
+      align-items: center;
+      justify-content: left;
+    }
+    .login {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+    }
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nav-link {
+      color: var(--text-color);
+      text-decoration: none;
+      padding-right: var(--pad);
+    }
+    .router-link-exact-active {
+      font-weight: var(--weight-bold);
+      color: var(--color-link);
+    }
+  }
+  .nav-cta {
+    cursor: pointer;
+    border: none;
+    border-radius: 20rem;
+    padding: 0 10px;
+    font-weight: var(-base-font-weight);
+    background-color: var(--bg-primary);
+    color: var(--font-color);
+  }
+}

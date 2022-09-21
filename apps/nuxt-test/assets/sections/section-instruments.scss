@@ -1,0 +1,13 @@
+@use '../variables.css';
+
+.instrument-wrap {
+  background-color: var(--color-blue);
+  padding: var(--pad);
+  border-radius: var(--bdr-radius);
+}
+
+.blog-subtitle {
+  width: 100%;
+  padding-left: var(--pad);
+  padding-bottom: var(--pad);
+}

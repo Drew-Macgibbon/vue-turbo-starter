@@ -8,7 +8,7 @@
     "dev": "turbo run dev --parallel",
     "start": "turbo run start --parallel",
     "start:apps": "turbo run start --parallel --filter='./apps/*'",
-    "start:vite-app": "turbo run start --filter vite-app",
+    "start:nuxt-test": "turbo run dev --filter nuxt-test",
     "start:nuxt-app": "turbo run start --filter nuxt-app",
     "start:storybook": "turbo run start --filter storybook",
     "lint": "turbo run lint",

@@ -1,0 +1,16 @@
+
+.gap1 {
+  gap: var(--gap);
+}
+
+.gap2 {
+  gap: calc(var(--gap) * 2);
+}
+
+.gap3 {
+  gap: calc(var(--gap) * 3);
+}
+
+.gap4 {
+  gap: calc(var(--gap) * 4);
+}

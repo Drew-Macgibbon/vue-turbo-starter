@@ -1,5 +1,14 @@
 {
   "name": "nuxt-shared",
   "version": "0.0.0",
-  "private": true
+  "private": true,
+  "directories": {
+    "types": "./types",
+    "public": "./public",
+    "plugins": "./plugins",
+    "layouts": "./layouts",
+    "content": "./content",
+    "composables": "./composables",
+    "components": "./components"
+  }
 }

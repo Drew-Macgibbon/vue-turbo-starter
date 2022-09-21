@@ -1,0 +1,80 @@
+/* Order of Tailwind files is important https://tailwindcss.com/docs/using-with-preprocessors */
+/* https://nerdcave.com/tailwind-cheat-sheet */
+@use './variables.css';
+
+@forward './tailwind.base.css';
+@forward './helpers.scss';
+@forward './spacing.scss';
+@forward './margin.scss';
+@forward './position.scss';
+@forward './height.scss';
+@forward './width.scss';
+@forward './typography.scss';
+@forward './background.scss';
+@forward './padding.scss';
+
+
+@forward './tailwind.components.css';
+@forward './mobile.scss';
+@forward './navbar.scss';
+@forward './components/_index.scss';
+@forward './layouts/_index.scss';
+@forward './sections/_index.scss';
+
+@forward './tailwind.utilities.css';
+@import './mixins/_index.scss';
+
+
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+}
+
+#appContent {
+  overflow: hidden;
+  width: calc(100vw - var(--mobi-nav-closed) - var(--scrollbar-width));
+  margin-left: var(--mobi-nav-closed);
+  height: 100%;
+}
+
+ /* has to be here since this is where #appContent is defined */
+@media screen and (max-width: 1200px) {
+  #appContent {
+    overflow: hidden;
+    width: calc(100vw - var(--scrollbar-width));
+    margin-left: 0px;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #appContent {
+    width: 100vw;
+  }
+}
+
+.page-wrap {
+  position: relative;
+  overflow-x: hidden;
+}
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: rgb(13,148,136);
+  opacity: 0.75;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}

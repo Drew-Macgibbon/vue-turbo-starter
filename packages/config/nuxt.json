@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "strict": true,
     "lib": ["es2018"],
     "types": ["nuxt", "nuxt3"],
     "esModuleInterop": true,
+    "moduleResolution": "node",
     "target": "es2018",
-    "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,

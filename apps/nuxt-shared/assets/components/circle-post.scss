@@ -1,0 +1,70 @@
+@use '../variables.css';
+.blog-subtitle {
+  width: 100%;
+  padding-left: var(--pad);
+  padding-bottom: var(--pad);
+}
+
+.post-wrapper {
+  transition: all 0.5s ease-in-out;
+  .post-grid {
+    overflow: hidden;
+    &.background {
+      background-color: var(--color-blue);
+      border-radius: var(--bdr-radius);
+      padding: var(--pad);
+      display: flex;
+      .post {
+        max-height: 320px;
+        height: auto;
+        .post-body {
+          overflow: hidden;
+          p {
+            padding-bottom: calc(var(--pad) / 2);
+          }
+        }
+      }
+    }
+  }
+  &.no-background {
+    background: none;
+    .post {
+      max-height: 320px;
+      height: auto;
+      .post-body {
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.post-title-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.post-body {
+  border-bottom: 1px solid lightgray;
+  padding: 1rem;
+  max-height: 200px;
+  overflow-y: hidden;
+  margin: 0;
+}
+.body-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.open-post {
+  p {
+    margin-bottom: 1rem;
+  }
+  ul {
+    margin-bottom: 1rem;
+    li {
+      margin-bottom: .4rem;
+    }
+  }
+}

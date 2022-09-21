@@ -1,0 +1,77 @@
+/* USING https://icones.js.org/ */
+
+@use '../variables.css';
+
+.icons {
+  color: var(--text-color);
+  &.small {
+    font-size: 18px;
+  }
+  &.medium {
+    font-size: 23px;
+  }
+  &.large {
+    font-size: 32px;
+  }
+  &.huge {
+    font-size: 40px;
+  }
+}
+
+.mobi-icons {
+  display: none;
+  background-color: var(--color-blue);
+  padding: var(--pad);
+  gap: var(--pad);
+  .icon {
+    display: flex;
+    color: var(--color-text);
+    background-color: var(--bg-accent);
+    border-radius: 20rem;
+    padding: calc(var(--pad) / 2.5);
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.mobi-link {
+  .icon {
+    margin-left: 1px;
+    position: absolute;
+    display: flex;
+  }
+}
+
+.nav-icons {
+  display: flex;
+  gap: calc(var(--pad) / 2);
+  .icon {
+    cursor: pointer;
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .hamburger {
+    display: inline !important;
+  }
+  .nav-icons {
+    display: none !important;
+  }
+
+  .mobi-link {
+    .icon {
+      margin-left: 8px;
+    }
+  }
+
+  .mobi-icons {
+    margin: calc(var(--pad) / 2);
+    border-radius: var(--bdr-radius);
+    display: flex;
+  }
+}

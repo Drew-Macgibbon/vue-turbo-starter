@@ -1,0 +1,77 @@
+@use './variables.css';
+
+@mixin transition($params) {
+  -webkit-transition: $params;
+    -moz-transition: $params;
+   -khtml-transition: $params;
+       -o-transition: $params;
+          transition: $params;
+}
+
+.mobi-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--pad);
+  height: auto;
+  margin: calc(var(--pad) / 2);
+  padding: calc(var(--pad) / 3);
+  color: var(--color-text);
+  overflow: hidden;
+  border-radius: 8px;
+  &.router-link-exact-active {
+    background-color: var(--bg-primary);
+    color: var(--color-link);
+  }
+  .mobi-link-name {
+    width: 100%;
+    margin-left: 2.5rem;
+    white-space: nowrap;
+  }
+}
+
+.mobi {
+  position:fixed;
+  z-index:100;
+  border-right: 1px solid var(--bdr-color);
+  box-shadow: var(--shadow);
+  margin-top: var(--nav-height);
+  width: var(--mobi-nav-closed);
+  overflow-y: scroll;
+  height: 100%;
+  background-color: var(--bg-accent);
+  @include transition(all 0.3s ease-in);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &:hover {
+    width: var(--mobi-nav-open);
+  }
+  &.open {
+    display: block;
+    width: var(--mobi-nav-open);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(var(--min-grid-width), 1fr)) !important;
+  }
+  .mobi {
+    width: 0px;
+  }
+  .feature-count {
+    .count {
+      padding: .55rem 1.3rem;
+    }
+  }
+
+  .broadcast-wrapper.overlay.active {
+    width: calc(100vw - var(--scrollbar-width));
+    left: 0;
+  }
+
+  .blog-body-grid {
+    grid-template-columns: 92% !important;
+  }
+}
